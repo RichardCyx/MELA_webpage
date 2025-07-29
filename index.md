@@ -2,22 +2,12 @@
 layout: project_page
 permalink: /
 
-<<<<<<< HEAD
 title: "WaveMind: Towards a Generalist EEG Foundation Model Aligned to Textual and Visual Modalities"
 authors:
     Ziyi Zeng$^1$,Zhenyang Cai$^1$,Yixi Cai$^1$,Xidong Wang$^1$,  <br>
     Rongsheng Wang$^1$, Siqi Cai$^2$, Haizhou Li$^1$,Benyou Wang$^1$  
 affiliations:
     $^1$ The Chinese University of Hong Kong, Shenzhen  <br>
-=======
-title: WaveMind: Towards a Generalist EEG Foundation Model Aligned to Textual and Visual Modalities
-authors:
-     Ziyi Zeng$^1$,Zhenyang Cai$^1$,Yixi Cai$^1$,Xidong Wang$^1$,  <br>
-    Rongsheng Wang$^1$, Siqi Cai$^2$, Haizhou Li$^1$,Benyou Wang$^1$  
-    
-affiliations:
-    $^1$ The Chinese University of Hong Kong, Shenzhen <br>
->>>>>>> a663ee4 (second change)
     $^2$ Harbin Institute of Technology, Shenzhen
 paper: https://www.overleaf.com/6791821851jzqdxbyycrrh#d3b960
 video: 
@@ -62,11 +52,7 @@ We align EEG features into a unified space using a dual-supervised CLIP framewor
 • CLIP-BERT produces semantic features: $\mathbf{Z}_T \in \mathbb{R}^{768}$
 After L2 normalization, both are mapped into the same CLIP space.
 
-<<<<<<< HEAD
 The objective function combines two InfoNCE losses: $$\mathcal{L} = \lambda \mathcal{L}_{\text{img}} + (1 - \lambda)\mathcal{L}_{\text{txt}}$$.  We train on 1.2M EEG pairs, outperforming 7 baseline encoders. Adding an auxiliary classification loss $$\mathcal{L}_{cls}$$ showed no performance gain
-=======
-The objective function combines two InfoNCE losses: $$\mathcal{L} = \lambda \mathcal{L}_{\text{img}} + (1 - \lambda)\mathcal{L}_{\text{txt}}$$. We train on 1.2M EEG pairs, outperforming 7 baseline encoders. Adding an auxiliary classification loss $$\mathcal{L}_{cls}$$ showed no performance gain.
->>>>>>> a663ee4 (second change)
 
 #### Stage 2：**Cold-start Training for the Adapter**
 We propose pre-training the adapter on image-domain data $\hat{Z_I}$ (sharing CLIP space with EEG features $\hat{Z_e}$) using LLaVA-Pretrain-558k before EEG instruction-tuning. This aligns the MLLM with CLIP space and initializes EEG-domain tuning.
