@@ -5,10 +5,11 @@ permalink: /
 title: "WaveMind: Towards a Generalist EEG Foundation Model Aligned to Textual and Visual Modalities"
 authors:
     Ziyi Zeng$^1$,Zhenyang Cai$^1$,Yixi Cai$^1$,Xidong Wang$^1$,  <br>
-    Rongsheng Wang$^1$, Siqi Cai$^2$, Haizhou Li$^1$,Benyou Wang$^1$  
+    Rongsheng Wang$^1$, Siqi Cai$^2$, Haizhou Li$^1$,Benyou Wang$^1$*  
 affiliations:
     $^1$ The Chinese University of Hong Kong, Shenzhen  <br>
-    $^2$ Harbin Institute of Technology, Shenzhen
+    $^2$ Harbin Institute of Technology, Shenzhen <br>
+    *wangbenyou@cuhk.edu.cn
 paper: https://www.overleaf.com/6791821851jzqdxbyycrrh#d3b960
 video: 
 code: 
