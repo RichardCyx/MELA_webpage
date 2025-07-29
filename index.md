@@ -24,8 +24,10 @@ While electroencephalography (EEG) interpretation using multimodal large languag
         </div>
     </div>
 </div>
-<img src="static\image\Graphic_abstract.png" width="600" height="400">
 
+<div style="text-align: center; margin: 20px 0;">
+<img src="static\image\Graphic_abstract.png" width="600" height="400">
+</div>
 ## Background
 
 ## Objective
@@ -38,9 +40,9 @@ The main objective of this paper was to prove that singular type of brain activi
 ### Architecture
 Decode the raw EEG signals $X_e \in \mathbb{R}^{T \times C}$ into neural language tokens  $W = \{w_1, \dots, w_N\}$ via LLM backbone, as shown in the *Figure 1* below. As maany works have shown that inserting category information is beneficial for model generation. Therefore, WaveMind incorporates Retrieval-Augmented Generation (RAG) module that stores multimodal supervision's features (i.e. $\hat{Z}^I$ and $\hat{Z}^T$) with their category.
 
-
-<img src="static\image\Architecture-1.png" width="900" height="500">
-
+<div style="text-align: center; margin: 20px 0;">
+  <img src="static\image\Architecture-1.png" width="900" height="500">
+</div>
 *Figure 1*: **The overall architecture of WaveMind.** Left: three-stage training procedure. Right: inference procedure of WaveMind. The system projects EEG data into a unified semantic space and integrates retrieval-augmented generation (RAG) for robust language generation.
 
 ### Training Paradigm
@@ -60,7 +62,9 @@ We propose pre-training the adapter on image-domain data $\hat{Z_I}$ (sharing CL
 ##### Stage 3: **EEG Instruction Tuning**
 At this stage, we perform instruction tuning using the *WaveMind\_Instruct-338K*. In this stage, LoRA module and modality-adapter are unfrozen during training, while ATMM is frozen during training.
 
+<div style="text-align: center; margin: 20px 0;">
 <img src="static\image\Instruction.png" width="900" height="500">
+</div>
 
 *Figure 2*: **Instruction construction pipeline of WaveMind.** The raw signals are first pre-processed
 into segments with the same configuration, then executed with different instruction synthesis processes
