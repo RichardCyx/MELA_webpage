@@ -194,4 +194,4 @@ For cognitive tasks using the THING-EEG dataset, we additionally assess closed-s
 • **Multi-Stage Training and Performance**: We propose a three-stage training scheme to fully unlock the model’s ability to recognize and understand EEG. The model performs well in classification tasks and has initially acquired the ability to open question answering.
 
 
-<p id="footnote-star"><sup>*</sup> Benyou is the corresponding author. <a href="#ref1">↩</a></p>
+<p id="footnote-star"><sup>*</sup> Benyou is the corresponding author. <a href="#ref-star">↩</a></p>
