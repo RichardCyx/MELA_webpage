@@ -9,3 +9,12 @@ Gemfile.lock
 node_modules
 package.json
 favicon.ico
+MELA/
+MELA_webpage/
+README.md
+css/
+js/
+! static/image/Architecture-1.png
+! static/image/Averaged_Classification_Result_on_WaveMind-Bench.png
+_layouts/
+_config.yml
