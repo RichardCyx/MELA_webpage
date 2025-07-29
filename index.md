@@ -4,7 +4,9 @@ permalink: /
 
 title: On Computable Numbers, with an Application to the Entscheidungsproblem
 authors:
-    Ziyi Zeng$^1$,Zhenyang Cai,Yixi Cai,Xidong Wang ,Rongsheng Wang
+    Ziyi Zeng$^1$,Zhenyang Cai$^1$,Yixi Cai$^1$,Xidong Wang$^1$ ,Rongsheng Wang$^1$,Siqi Cai$^2$,Haizhou Li$^1$,Benyou Wang$^1$
+    $^1$ The Chinese University of Hong Kong, Shenzhen\\
+    $^2$ Harbin Institute of Technology, Shenzhen
 affiliations:
     The Chinese University of Hong Kong, Shenzhen
 paper: https://www.overleaf.com/6791821851jzqdxbyycrrh#d3b960
