@@ -2,12 +2,22 @@
 layout: project_page
 permalink: /
 
+<<<<<<< HEAD
 title: "WaveMind: Towards a Generalist EEG Foundation Model Aligned to Textual and Visual Modalities"
 authors:
     Ziyi Zeng$^1$,Zhenyang Cai$^1$,Yixi Cai$^1$,Xidong Wang$^1$,  <br>
     Rongsheng Wang$^1$, Siqi Cai$^2$, Haizhou Li$^1$,Benyou Wang$^1$  
 affiliations:
     $^1$ The Chinese University of Hong Kong, Shenzhen  <br>
+=======
+title: WaveMind: Towards a Generalist EEG Foundation Model Aligned to Textual and Visual Modalities
+authors:
+     Ziyi Zeng$^1$,Zhenyang Cai$^1$,Yixi Cai$^1$,Xidong Wang$^1$,  <br>
+    Rongsheng Wang$^1$, Siqi Cai$^2$, Haizhou Li$^1$,Benyou Wang$^1$  
+    
+affiliations:
+    $^1$ The Chinese University of Hong Kong, Shenzhen <br>
+>>>>>>> a663ee4 (second change)
     $^2$ Harbin Institute of Technology, Shenzhen
 paper: https://www.overleaf.com/6791821851jzqdxbyycrrh#d3b960
 video: 
@@ -24,7 +34,7 @@ While electroencephalography (EEG) interpretation using multimodal large languag
         </div>
     </div>
 </div>
-
+<img src="static\image\Graphic_abstract.png" width="600" height="400">
 
 ## Background
 
@@ -41,7 +51,7 @@ Decode the raw EEG signals $X_e \in \mathbb{R}^{T \times C}$ into neural languag
 
 <img src="static\image\Architecture-1.png" width="900" height="500">
 
-***Figure 1*: The overall architecture of WaveMind. Left: three-stage training procedure. Right: inference procedure of WaveMind. The system projects EEG data into a unified semantic space and integrates retrieval-augmented generation (RAG) for robust language generation.**
+*Figure 1*: **The overall architecture of WaveMind.** Left: three-stage training procedure. Right: inference procedure of WaveMind. The system projects EEG data into a unified semantic space and integrates retrieval-augmented generation (RAG) for robust language generation.
 
 ### Training Paradigm
 #### Stage 1: **Dual-Supervision Representation Alignment**
@@ -52,13 +62,25 @@ We align EEG features into a unified space using a dual-supervised CLIP framewor
 • CLIP-BERT produces semantic features: $\mathbf{Z}_T \in \mathbb{R}^{768}$
 After L2 normalization, both are mapped into the same CLIP space.
 
+<<<<<<< HEAD
 The objective function combines two InfoNCE losses: $$\mathcal{L} = \lambda \mathcal{L}_{\text{img}} + (1 - \lambda)\mathcal{L}_{\text{txt}}$$.  We train on 1.2M EEG pairs, outperforming 7 baseline encoders. Adding an auxiliary classification loss $$\mathcal{L}_{cls}$$ showed no performance gain
+=======
+The objective function combines two InfoNCE losses: $$\mathcal{L} = \lambda \mathcal{L}_{\text{img}} + (1 - \lambda)\mathcal{L}_{\text{txt}}$$. We train on 1.2M EEG pairs, outperforming 7 baseline encoders. Adding an auxiliary classification loss $$\mathcal{L}_{cls}$$ showed no performance gain.
+>>>>>>> a663ee4 (second change)
 
 #### Stage 2：**Cold-start Training for the Adapter**
-we propose pre-training the adapter on image-domain data $\hat{Z_I}$ (sharing CLIP space with EEG features $\hat{Z_e}$) using LLaVA-Pretrain-558k before EEG instruction-tuning. This aligns the MLLM with CLIP space and initializes EEG-domain tuning.
+We propose pre-training the adapter on image-domain data $\hat{Z_I}$ (sharing CLIP space with EEG features $\hat{Z_e}$) using LLaVA-Pretrain-558k before EEG instruction-tuning. This aligns the MLLM with CLIP space and initializes EEG-domain tuning.
 
 ##### Stage 3: **EEG Instruction Tuning**
 At this stage, we perform instruction tuning using the *WaveMind\_Instruct-338K*. In this stage, LoRA module and modality-adapter are unfrozen during training, while ATMM is frozen during training.
+
+<img src="static\image\Instruction.png" width="900" height="500">
+
+*Figure 2*: **Instruction construction pipeline of WaveMind.** The raw signals are first pre-processed
+into segments with the same configuration, then executed with different instruction synthesis processes
+depending on the type of supervision. We have constructed four types of instructions to ensure the model learns diverse knowledge.
+
+
 
 ## Result 
 ### **Classification Evaluation**
