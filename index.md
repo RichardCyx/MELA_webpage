@@ -52,7 +52,7 @@ We align EEG features into a unified space using a dual-supervised CLIP framewor
 • CLIP-BERT produces semantic features: $\mathbf{Z}_T \in \mathbb{R}^{768}$
 After L2 normalization, both are mapped into the same CLIP space.
 
-The objective function combines two InfoNCE losses: $\mathcal{L} = \lambda \mathcal{L}_{\text{img}} + (1 - \lambda)\mathcal{L}_{\text{txt}}$.  We train on 1.2M EEG pairs, outperforming 7 baseline encoders. Adding an auxiliary classification loss $\mathcal{L}_{cls}$ showed no performance gain
+The objective function combines two InfoNCE losses: $$\mathcal{L} = \lambda \mathcal{L}_{\text{img}} + (1 - \lambda)\mathcal{L}_{\text{txt}}$$.  We train on 1.2M EEG pairs, outperforming 7 baseline encoders. Adding an auxiliary classification loss $\mathcal{L}_{cls}$ showed no performance gain
 
 #### Stage 2：**Cold-start Training for the Adapter**
 we propose pre-training the adapter on image-domain data $\hat{Z_I}$ (sharing CLIP space with EEG features $\hat{Z_e}$) using LLaVA-Pretrain-558k before EEG instruction-tuning. This aligns the MLLM with CLIP space and initializes EEG-domain tuning.
