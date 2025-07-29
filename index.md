@@ -2,7 +2,7 @@
 layout: project_page
 permalink: /
 
-title: On Computable Numbers, with an Application to the Entscheidungsproblem
+title: WaveMind: Towards a Generalist EEG Foundation Model Aligned to Textual and Visual Modalities
 authors:
     Ziyi Zeng$^1$,Zhenyang Cai$^1$,Yixi Cai$^1$,Xidong Wang$^1$,  
     Rongsheng Wang$^1$, Siqi Cai$^2$, Haizhou Li$^1$,Benyou Wang$^1$  
