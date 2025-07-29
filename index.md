@@ -5,7 +5,7 @@ permalink: /
 title: "WaveMind: Towards a Generalist EEG Foundation Model Aligned to Textual and Visual Modalities"
 authors:
     Ziyi Zeng$^1$, Zhenyang Cai$^1$, Yixi Cai$^1$, Xidong Wang$^1$,  <br>
-    Rongsheng Wang$^1$, Siqi Cai$^2$, Haizhou Li$^1$, Benyou Wang$^1$*  
+    Rongsheng Wang$^1$, Siqi Cai$^2$, Haizhou Li$^1$, Benyou Wang$^1$<sup><a href="#footnote-star" id="ref-star">[*]</a></sup>  
 affiliations:
     $^1$ The Chinese University of Hong Kong, Shenzhen  <br>
     $^2$ Harbin Institute of Technology, Shenzhen <br>
@@ -192,3 +192,6 @@ For cognitive tasks using the THING-EEG dataset, we additionally assess closed-s
 • **Comprehensive Dataset and Benchmark**: We synthesized WaveMind-Instruct, the first cross-task instruction dataset comprising 4 instruction-tuning types and 2 chat scenarios, along with WaveMind-Bench, which contains 12K MCQs, to facilitate evaluation of EEGMLLMs.
 
 • **Multi-Stage Training and Performance**: We propose a three-stage training scheme to fully unlock the model’s ability to recognize and understand EEG. The model performs well in classification tasks and has initially acquired the ability to open question answering.
+
+
+<p id="footnote-star"><sup>[*]</sup> Benyou is the corresponding author. <a href="#ref1">↩</a></p>
