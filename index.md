@@ -10,7 +10,7 @@ affiliations:
     $^1$ The Chinese University of Hong Kong, Shenzhen  <br>
     $^2$ Harbin Institute of Technology, Shenzhen <br>
     *wangbenyou@cuhk.edu.cn
-paper: https://www.overleaf.com/6791821851jzqdxbyycrrh#d3b960
+paper: # https://www.overleaf.com/6791821851jzqdxbyycrrh#d3b960
 video: 
 code: 
 data: 
